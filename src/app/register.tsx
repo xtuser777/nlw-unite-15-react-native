@@ -5,7 +5,7 @@ import { FontAwesome6, MaterialIcons } from '@expo/vector-icons';
 import { Input } from '@/components/input';
 import { colors } from '@/styles/colors';
 import { Button } from '@/components/button';
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -16,6 +16,7 @@ export default function Register() {
       return Alert.alert('Inscrição', 'Preencha toddos os campos.');
     } else {
       console.warn(name, email);
+      router.push('/ticket');
     }
   }
 
